@@ -1,0 +1,130 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "1619",
+    "jobId" : "jobs/myJob",
+    "name" : "myJob",
+    "schedule" : "0 0 0 * * ? *",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    },
+    "availableFabrics" : [ {
+      "id" : "1619",
+      "name" : "jagmeet_dev",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    } ]
+  },
+  "processes" : {
+    "ZjJC8U4AWLpnMjRxhCmmB$$Tjn8lNGqOx0wHo3iAa279" : {
+      "id" : "ZjJC8U4AWLpnMjRxhCmmB$$Tjn8lNGqOx0wHo3iAa279",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "Pipeline_0",
+        "slug" : "Pipeline_0",
+        "x" : 300,
+        "y" : 240
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "3DHXijp_cseefvK1EVSMR$$IJceros0SgNsRJPI-wL4G"
+        } ],
+        "outputs" : [ {
+          "id" : "Sjq_o-40Gw-I80HpkT2eS$$43VTfAsWbYF6vy7pvLDr0"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/customers_orders",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "HelloWorld" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
+    },
+    "PEs9Ez6vkhUTmxRWjlD8w$$5PqDQESDL2XhhqMynQNSE" : {
+      "id" : "PEs9Ez6vkhUTmxRWjlD8w$$5PqDQESDL2XhhqMynQNSE",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "Pipeline_1",
+        "slug" : "Pipeline_1",
+        "x" : 620,
+        "y" : 220
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "VMGLwc2ZCt_juwwyhFPax$$HRDyOLYQD6hsejkaL1tsS"
+        } ],
+        "outputs" : [ {
+          "id" : "b6efvix7HVbViY-in-PkM$$yRZAD88Zhxju0XABhyXlk"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/report_top_customers",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "HelloWorld" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "WNRMzyMrNo3Efn2-0jeC7",
+    "source" : "ZjJC8U4AWLpnMjRxhCmmB$$Tjn8lNGqOx0wHo3iAa279",
+    "target" : "PEs9Ez6vkhUTmxRWjlD8w$$5PqDQESDL2XhhqMynQNSE",
+    "sourcePort" : "Sjq_o-40Gw-I80HpkT2eS$$43VTfAsWbYF6vy7pvLDr0",
+    "targetPort" : "VMGLwc2ZCt_juwwyhFPax$$HRDyOLYQD6hsejkaL1tsS"
+  } ]
+}
